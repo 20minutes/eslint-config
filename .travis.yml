@@ -1,0 +1,21 @@
+language: node_js
+
+node_js:
+  - lts/*
+
+cache:
+  directories:
+  - node_modules
+
+script:
+  - node -c index.js
+
+deploy:
+  matrix:
+  - provider: npm
+    skip_cleanup: true
+    email: web-tech+npm@20minutes.fr
+    api_key:
+      secure: Gugx6b1WswCbZepIGUEfXMMttnnjS8t8BnIZBqESk++d4IkFG7eSPIVdiIUjqWnuBkaDdyLKY1p4ErXnxya6ha73lZuwB6lo1MLE8nhNdWw4gCNZEYYEy6B3PhAKAgTXCsWBEER6Xx9e/L3l7Z4WI1mZx90iqllXFAlwb6xVtBYh1hl0XHTGyVfZeyIrrvzzFR7Kj6dWK03P+36Md8OnjME/K4xheKnoVPRgT7Xkc86hrHN6MXlm0qa6KuGjWmrS6MMKKR/R0VP7p/xB0GOLMAITv1Xu+hoYGwdjrMoCCt0DyRJhKUr4K6EmFarWuZVCq0HnNx44kVoxw5PC3blDmJFSZZ80j1IQR26HVqA+ZdvZLGvWZf4ci1GTISLKNdXhIpvtriZqDupfFbGRxbdJioebKzpyY4PgnQvkaV98HLEH9uKbaN5pcC2Xc5NIweiawL+zFN8DtixnNCTFKvpKzlnPPCaeC95LjzZ3rYTou1yv6eUd6J1mWycLgMs0uIfiu8T/WEawJW5vtuNy5Oo2I1vcrQIDXp3GHQ1kRtdH1ORgqYgToK6lrgx6Pw6yQYMqDWf2CYlW8bBcjEng3GmrVXO/8aOXkZuiuOkqM5dUlOKNbUIaImdoJX/VaOOS6V6w5cH+qoNFc1OyquSvBhjzQ96cfxsVnzufNhcxLdkFde0=
+    on:
+      tags: true
