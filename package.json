@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-20minutes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "peerDependencies": {
     "eslint-config-airbnb": "^16.0.0"
   }
