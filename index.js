@@ -20,7 +20,7 @@ module.exports = {
       "props": false,
     }],
     "import/prefer-default-export": 0,
-    "no-multiple-empty-lines": [1, { "max": 2, "maxEOF": 1, "maxBOF": 0 }],
+    "no-multiple-empty-lines": [1, { "max": 1, "maxEOF": 1, "maxBOF": 0 }],
     "padding-line-between-statements": [
         "error",
         { "blankLine": "always", "prev": "*", "next": "return" },
