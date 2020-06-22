@@ -7,18 +7,22 @@ This config depends on [Airbnb config](https://github.com/airbnb/javascript).
 
 Using NPM:
 ```
-npm install --save-dev eslint-config-20minutes
+npm install --save-dev eslint eslint-config-airbnb eslint-config-20minutes
+
 ```
 
 Using Yarn:
 ```
-yarn add --dev eslint-config-20minutes
+yarn add --dev eslint eslint-config-airbnb eslint-config-20minutes
 ```
 
 Update your `.eslintrc`:
 
 ```js
 {
-  "extends": "20minutes"
+  "extends": "20minutes",
+  "rules": {
+    // Additional, per-project rules...
+  }
 }
 ```
