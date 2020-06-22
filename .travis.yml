@@ -1,14 +1,21 @@
+os: linux
+dist: xenial
 language: node_js
 
-node_js:
-  - lts/*
+# avoid double Travis build when the PR is created on upstream
+if: |
+    type = pull_request OR \
+    branch = master OR \
+    tag =~ ^v
 
-cache:
-  directories:
-  - node_modules
+node_js:
+  - 10
+  - 12
+  - 14
 
 script:
   - node -c index.js
+  - npm run lint
 
 deploy:
   - provider: npm
