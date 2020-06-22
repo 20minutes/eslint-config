@@ -8,20 +8,22 @@ if: |
     branch = master OR \
     tag =~ ^v
 
-node_js:
-  - 10
-  - 12
-  - 14
-
 script:
   - node -c index.js
   - npm run lint
 
-deploy:
-  - provider: npm
-    skip_cleanup: true
-    email: web-tech+npm@20minutes.fr
-    api_key:
-      secure: "mnpMKFotRnT2DyBmW9AvInGz3YKfK4ttnGNu0ILwpA1/V4KmyZ3s756ZB4V33Ug02C9xQTMT9Cc3FcysGoyyLK5QRnvwfztiQe5ank8hEiMFmI6dumPb/v0r78PLcX1xkhbbqXfjnRLWLVJUgR2mt5kRSSCJSoEhl2lbqPl6IDbcprD+kERntZ+FlC3Bp1xjplXmAcau4LgoFRPzPyQo5fBNB7BdK2aMHUKdlY3UaWsau7F+8EpXfEebrSk6ZDyOoLz6w25mQda+UViWZEQc5LQOSqprT73aKWriuh+o5ruZXlAJDds5f5iizzugY3BpU4NLS6GK9RmPWy4+gBz8RFlKaeMVZUXGnxMXpcuswaBcWkE4ZgseCi5iv1DDZ+V59NIGqg0jc4JrSmp/c1onHRUAofvVx4YJ3CD/0hRJ9X8/vo4ZchPJXp29o51MH4jvl3EhkMZxpUGMSsmBQKKZjCKBgCNTD3BMYsYlpOLjv4KHRhGBYyNK26UmP33isJGpEP1iyuOdpG5NfdtSQsGGUqRxvYTkEGSNDjop2pwLm/ZSaJJs2b+eChjIYQZ94JQ5TzriSOMI89okrTVfx7b+gpV3WUip3Al+8HUrBBr8Bf7E7xWxHke4SlWWLyeRQGHFgGU9jQbLg6XaP6TzJnNoqPFaec54u4S9Sdo60dDrYdU="
-    on:
-      tags: true
+jobs:
+  include:
+    - node_js: 10
+    - node_js: 12
+    - node_js: 14
+    - stage: npm release
+      if: (tag =~ ^v)
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: web-tech+npm@20minutes.fr
+        api_key:
+          secure: "mnpMKFotRnT2DyBmW9AvInGz3YKfK4ttnGNu0ILwpA1/V4KmyZ3s756ZB4V33Ug02C9xQTMT9Cc3FcysGoyyLK5QRnvwfztiQe5ank8hEiMFmI6dumPb/v0r78PLcX1xkhbbqXfjnRLWLVJUgR2mt5kRSSCJSoEhl2lbqPl6IDbcprD+kERntZ+FlC3Bp1xjplXmAcau4LgoFRPzPyQo5fBNB7BdK2aMHUKdlY3UaWsau7F+8EpXfEebrSk6ZDyOoLz6w25mQda+UViWZEQc5LQOSqprT73aKWriuh+o5ruZXlAJDds5f5iizzugY3BpU4NLS6GK9RmPWy4+gBz8RFlKaeMVZUXGnxMXpcuswaBcWkE4ZgseCi5iv1DDZ+V59NIGqg0jc4JrSmp/c1onHRUAofvVx4YJ3CD/0hRJ9X8/vo4ZchPJXp29o51MH4jvl3EhkMZxpUGMSsmBQKKZjCKBgCNTD3BMYsYlpOLjv4KHRhGBYyNK26UmP33isJGpEP1iyuOdpG5NfdtSQsGGUqRxvYTkEGSNDjop2pwLm/ZSaJJs2b+eChjIYQZ94JQ5TzriSOMI89okrTVfx7b+gpV3WUip3Al+8HUrBBr8Bf7E7xWxHke4SlWWLyeRQGHFgGU9jQbLg6XaP6TzJnNoqPFaec54u4S9Sdo60dDrYdU="
+        on:
+          tags: true
