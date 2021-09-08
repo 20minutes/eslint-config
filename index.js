@@ -9,7 +9,7 @@ module.exports = {
   parserOptions: {
     requireConfigFile: false,
   },
-  extends: 'airbnb',
+  extends: ['airbnb', 'prettier'],
   plugins: [
     'babel',
     'react',
@@ -32,5 +32,15 @@ module.exports = {
       { blankLine: 'never', prev: 'import', next: 'import' },
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'prettier/prettier': [
+      'error',
+      {
+        bracketSpacing: true,
+        printWidth: 100,
+        semi: false,
+        singleQuote: true,
+        trailingComma: 'es5',
+      },
+    ],
   },
 }
