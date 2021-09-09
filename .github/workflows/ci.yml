@@ -28,16 +28,8 @@ jobs:
     - name: install
       run: yarn
 
-    - name: install peer deps
-      run: yarn add --dev eslint-config-prettier eslint-config-airbnb
-
     - name: lint
       run: yarn lint
 
     - name: test
       run: node -c index.js
-
-    - name: remove peer deps
-      run: |
-        yarn remove eslint-config-prettier eslint-config-airbnb
-        yarn add --peer eslint-config-prettier eslint-config-airbnb
