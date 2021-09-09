@@ -10,19 +10,22 @@ module.exports = {
     requireConfigFile: false,
   },
   extends: ['airbnb', 'prettier'],
-  plugins: [
-    'babel',
-    'react',
-  ],
+  plugins: ['babel', 'react', 'prettier'],
   rules: {
     semi: [2, 'never'],
-    'no-console': [1, {
-      allow: ['warn', 'error'],
-    }],
+    'no-console': [
+      1,
+      {
+        allow: ['warn', 'error'],
+      },
+    ],
     curly: [1, 'all'],
-    'no-param-reassign': [1, {
-      props: false,
-    }],
+    'no-param-reassign': [
+      1,
+      {
+        props: false,
+      },
+    ],
     'import/prefer-default-export': 0,
     'no-multiple-empty-lines': [1, { max: 1, maxEOF: 1, maxBOF: 0 }],
     'padding-line-between-statements': [
