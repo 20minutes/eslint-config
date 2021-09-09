@@ -20,7 +20,9 @@
   "peerDependencies": {
     "eslint": "7.*",
     "eslint-config-airbnb": ">=16.0.0",
-    "eslint-config-prettier": "^8.3.0"
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": ">=4.0.0",
+    "prettier": ">=2.0.0"
   },
   "repository": "20minutes/eslint-config",
   "engines": {
