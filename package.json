@@ -1,21 +1,21 @@
 {
   "name": "@20minutes/eslint-config",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "ESLint shareable config for 20 Minutes",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/eslint-parser": "^7.15.4",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": ">=16.0.0",
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": ">=19.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-babel": "^5.0",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.25.1",
-    "eslint-plugin-react-hooks": "^1.7.0 || ^2.3.0 || ^3 || ^4",
-    "prettier": "^2.3.2"
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.4.1"
   },
   "peerDependencies": {
     "eslint": "7.* || 8.*",
