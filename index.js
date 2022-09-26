@@ -45,5 +45,6 @@ module.exports = {
         trailingComma: 'es5',
       },
     ],
+    'sort-imports': ['warn', { ignoreDeclarationSort: true, ignoreMemberSort: false }],
   },
 }
