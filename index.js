@@ -47,4 +47,5 @@ module.exports = {
     ],
     'sort-imports': ['warn', { ignoreDeclarationSort: true, ignoreMemberSort: false }],
   },
+  reportUnusedDisableDirectives: true,
 }
