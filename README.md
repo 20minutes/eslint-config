@@ -1,4 +1,4 @@
-# eslint-config-20minutes
+# @20minutes/eslint-config
 :nail_care: 20 Minutes JavaScript Style Guide
 
 ## Install
