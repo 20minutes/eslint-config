@@ -9,7 +9,7 @@
     ".": "./eslint.config.js"
   },
   "dependencies": {
-    "globals": "^15.15.0"
+    "globals": "^17.3.0"
   },
   "devDependencies": {
     "eslint": "^9.0.0",
