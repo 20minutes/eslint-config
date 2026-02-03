@@ -1,39 +1,45 @@
 {
   "name": "@20minutes/eslint-config",
-  "version": "1.2.7",
+  "version": "2.0.0",
   "description": "ESLint shareable config for 20 Minutes",
   "license": "MIT",
+  "type": "module",
+  "main": "eslint.config.js",
+  "exports": {
+    ".": "./eslint.config.js"
+  },
+  "dependencies": {
+    "globals": "^15.15.0"
+  },
   "devDependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/eslint-parser": "^7.27.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb": ">=19.0.0",
-    "eslint-config-prettier": ">=9.0.0",
-    "eslint-plugin-babel": "^5.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.5",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "prettier": "^3.5.3"
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": ">=10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "prettier": "^3.8.1"
   },
   "peerDependencies": {
-    "eslint": "8.*",
-    "eslint-config-airbnb": ">=16.0.0",
+    "eslint": "9.*",
     "eslint-config-prettier": ">=9.0.0",
+    "eslint-plugin-import": ">=2.0.0",
     "eslint-plugin-prettier": ">=4.0.0",
+    "eslint-plugin-react": ">=7.0.0",
+    "eslint-plugin-react-hooks": ">=4.0.0",
     "prettier": ">=3.0.0"
   },
   "repository": "20minutes/eslint-config",
   "engines": {
-    "node": ">=20.19.0"
+    "node": ">=22.21.0"
   },
   "scripts": {
-    "test": "node -c index.js",
-    "lint": "eslint index.js"
+    "test": "node --check eslint.config.js",
+    "lint": "eslint eslint.config.js"
   },
   "files": [
-    "index.js"
+    "eslint.config.js",
+    "README.md"
   ],
   "keywords": [
     "20minutes",

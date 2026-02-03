@@ -1,28 +1,18 @@
 # eslint-config-20minutes
 :nail_care: 20 Minutes JavaScript Style Guide
 
-This config depends on [Airbnb config](https://github.com/airbnb/javascript).
-
 ## Install
 
-Using NPM:
 ```
-npm install --save-dev eslint eslint-config-airbnb eslint-config-prettier @20minutes/eslint-config
-
+yarn add --dev eslint eslint-config-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-prettier prettier @20minutes/eslint-config
 ```
 
-Using Yarn:
-```
-yarn add --dev eslint eslint-config-airbnb eslint-config-prettier @20minutes/eslint-config
-```
+## Usage (ESLint 9+)
 
-Update your `.eslintrc`:
+Create `eslint.config.js`:
 
 ```js
-{
-  "extends": "@20minutes",
-  "rules": {
-    // Additional, per-project rules...
-  }
-}
+import config from '@20minutes/eslint-config'
+
+export default config
 ```
