@@ -1,46 +1,24 @@
 {
   "name": "@20minutes/eslint-config",
-  "version": "2.0.0",
-  "description": "ESLint shareable config for 20 Minutes",
+  "version": "3.0.0",
+  "description": "Shared Biome linting/formatting config for 20 Minutes",
+  "author": "20 Minutes",
   "license": "MIT",
   "type": "module",
-  "main": "eslint.config.js",
+  "main": "biome.jsonc",
   "exports": {
-    ".": "./eslint.config.js"
+    "./biome": "./biome.jsonc"
   },
   "dependencies": {
-    "globals": "^17.3.0"
-  },
-  "devDependencies": {
-    "eslint": "^9.0.0",
-    "eslint-config-prettier": ">=10.1.8",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "prettier": "^3.8.1"
-  },
-  "peerDependencies": {
-    "eslint": "9.*",
-    "eslint-config-prettier": ">=9.0.0",
-    "eslint-plugin-import": ">=2.0.0",
-    "eslint-plugin-prettier": ">=4.0.0",
-    "eslint-plugin-react": ">=7.0.0",
-    "eslint-plugin-react-hooks": ">=4.0.0",
-    "prettier": ">=3.0.0"
+    "@biomejs/biome": "^2.4.2"
   },
   "repository": "20minutes/eslint-config",
   "engines": {
-    "node": ">=22.21.0"
+    "node": ">= 22.21.1"
   },
   "scripts": {
-    "test": "node --check eslint.config.js",
-    "lint": "eslint eslint.config.js"
+    "lint": "biome check"
   },
-  "files": [
-    "eslint.config.js",
-    "README.md"
-  ],
   "keywords": [
     "20minutes",
     "code",
@@ -48,10 +26,6 @@
     "style",
     "lint",
     "linter",
-    "jscs",
-    "jshint",
-    "jslint",
-    "eslint",
     "validate",
     "code style",
     "strict",
@@ -59,6 +33,7 @@
     "checker",
     "verify",
     "enforce",
-    "hint"
+    "hint",
+    "biome"
   ]
 }
