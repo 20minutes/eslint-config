@@ -1,18 +1,31 @@
 # @20minutes/eslint-config
 :nail_care: 20 Minutes JavaScript Style Guide
 
-## Install
+## 📦 Installation
+
+Install the package:
 
 ```
-yarn add --dev eslint eslint-config-prettier eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-prettier prettier @20minutes/eslint-config
+yarn add --dev @20minutes/eslint-config
 ```
 
-## Usage (ESLint 9+)
+## 🚀 Usage
 
-Create `eslint.config.js`:
+Create a `biome.json` or `biome.jsonc` file in your project root and extend the configuration:
 
-```js
-import config from '@20minutes/eslint-config'
+```json
+{
+  "extends": ["@20minutes/eslint-config/biome"]
+}
+```
 
-export default config
+Then you can define/update scripts:
+
+```json
+{
+  "scripts": {
+    "lint": "biome check --max-diagnostics=none",
+    "lint:fix": "biome check --write --unsafe --max-diagnostics=none",
+  }
+}
 ```
