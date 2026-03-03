@@ -7,7 +7,18 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**/*.js", "**/*.mjs", "**/*.cjs", "**/*.jsx", "**/*.ts", "**/*.tsx", "**/*.json"]
+    "includes": [
+      "**/*.js",
+      "**/*.mjs",
+      "**/*.cjs",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.jsonc",
+      "**/*.json5",
+      "**/*.graphql"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -23,7 +34,12 @@
       "suspicious": {
         "noConsole": {
           "options": {
-            "allow": ["assert", "error", "info", "warn"]
+            "allow": [
+              "assert",
+              "error",
+              "info",
+              "warn"
+            ]
           }
         }
       }
@@ -47,6 +63,17 @@
       "jest",
       "test"
     ]
+  },
+  "json": {
+    "formatter": {
+      "expand": "always"
+    }
+  },
+  "graphql": {
+    "formatter": {
+      "enabled": true,
+      "indentStyle": "space"
+    }
   },
   "assist": {
     "enabled": true,
