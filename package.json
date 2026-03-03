@@ -1,6 +1,6 @@
 {
   "name": "@20minutes/eslint-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Shared Biome linting/formatting config for 20 Minutes",
   "author": "20 Minutes",
   "license": "MIT",
@@ -17,7 +17,8 @@
     "node": ">= 22.21.1"
   },
   "scripts": {
-    "lint": "biome check"
+    "lint": "biome check",
+    "lint:fix": "biome check --write --unsafe"
   },
   "keywords": [
     "20minutes",
