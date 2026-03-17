@@ -10,6 +10,7 @@
     "includes": [
       "**/*.js",
       "**/*.mjs",
+      "**/*.mts",
       "**/*.cjs",
       "**/*.jsx",
       "**/*.ts",
@@ -42,6 +43,9 @@
             ]
           }
         }
+      },
+      "complexity": {
+        "noUselessSwitchCase": "off"
       }
     }
   },
