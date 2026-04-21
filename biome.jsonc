@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.12/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -33,6 +33,7 @@
     "rules": {
       "recommended": true,
       "suspicious": {
+        "noVar": "error",
         "noConsole": {
           "options": {
             "allow": [
@@ -46,6 +47,9 @@
       },
       "complexity": {
         "noUselessSwitchCase": "off"
+      },
+      "style": {
+        "useBlockStatements": "error"
       }
     }
   },
