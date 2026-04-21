@@ -1,6 +1,6 @@
 {
   "name": "@20minutes/eslint-config",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Shared Biome linting/formatting config for 20 Minutes",
   "author": "20 Minutes",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "./biome": "./biome.jsonc"
   },
   "dependencies": {
-    "@biomejs/biome": "^2.4.2"
+    "@biomejs/biome": "^2.4.12"
   },
   "repository": "20minutes/eslint-config",
   "engines": {
