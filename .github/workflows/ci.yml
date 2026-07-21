@@ -22,7 +22,10 @@ jobs:
           node-version-file: '.nvmrc'
 
       - name: install
-        run: yarn
+        run: yarn install --frozen-lockfile
 
       - name: lint
         run: yarn lint
+
+      - name: test
+        run: yarn test:consumer
