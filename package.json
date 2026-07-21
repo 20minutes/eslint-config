@@ -10,7 +10,7 @@
     "./biome": "./biome.jsonc"
   },
   "dependencies": {
-    "@biomejs/biome": "^2.5.1"
+    "@biomejs/biome": "~2.5.5"
   },
   "repository": "20minutes/eslint-config",
   "engines": {
@@ -18,7 +18,8 @@
   },
   "scripts": {
     "lint": "biome check",
-    "lint:fix": "biome check --write --unsafe"
+    "lint:fix": "biome check --write --unsafe",
+    "test:consumer": "./scripts/test-consumer.sh"
   },
   "keywords": [
     "20minutes",

@@ -25,7 +25,7 @@ Then you can define/update scripts:
 {
   "scripts": {
     "lint": "biome check --max-diagnostics=none",
-    "lint:fix": "biome check --write --unsafe --max-diagnostics=none",
+    "lint:fix": "biome check --write --unsafe --max-diagnostics=none"
   }
 }
 ```
