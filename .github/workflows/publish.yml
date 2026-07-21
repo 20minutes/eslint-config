@@ -30,4 +30,4 @@ jobs:
           NODE_AUTH_TOKEN: unused
 
       - name: publish
-        run: yarn publish --access public
+        run: npm publish --access public
