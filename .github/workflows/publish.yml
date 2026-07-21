@@ -26,6 +26,8 @@ jobs:
 
       - name: install
         run: yarn install --frozen-lockfile
+        env:
+          NODE_AUTH_TOKEN: unused
 
       - name: publish
-        run: npm publish --access public
+        run: yarn publish --access public
